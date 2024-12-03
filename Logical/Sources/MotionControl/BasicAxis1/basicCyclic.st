@@ -9,7 +9,7 @@
  * Implementation of Program Basic
  ********************************************************************)
 PROGRAM _CYCLIC
-	
+
 	BasicControl.Command.Power			:= AutoSequence.cmd.powerMotor;
 	BasicControl.Command.Home			:= AutoSequence.cmd.home;
 	BasicControl.Command.MoveAbsolute	:= AutoSequence.cmd.moveAbsolute;

@@ -117,13 +117,24 @@ PROGRAM _CYCLIC
 			AutoSequence.cmd.moveRelative[1]	:= TRUE;
 			AutoSequence.cmd.moveRelative[2]	:= TRUE;
 			
-			IF (AutoSequence.status.actPositon[1] = (-540)) AND (AutoSequence.status.actPositon[2] = (-540))
-				AND (( AutoSequence.status.MoveAdditiveDone[1]) AND (AutoSequence.status.MoveAdditiveDone[2])) THEN
+//			IF (AutoSequence.status.actPositon[1] = (-540)) AND (AutoSequence.status.actPositon[2] = (-540))
+//				AND (( AutoSequence.status.MoveAdditiveDone[1]) AND (AutoSequence.status.MoveAdditiveDone[2])) THEN
+//				AutoSequence.cmd.moveRelative[1]	:= FALSE;
+//				AutoSequence.cmd.moveRelative[2]	:= FALSE;
+//				AutoSequence.state					:= WAIT;
+//			END_IF;	
+			IF (( AutoSequence.status.MoveAdditiveDone[1]) AND (AutoSequence.status.MoveAdditiveDone[2])) THEN
+				CountCycle	:= CountCycle + 1;			
+			
+			END_IF;	
+			
+			IF (CountCycle >= 3) THEN
+				CountCycle := 0;	
 				AutoSequence.cmd.moveRelative[1]	:= FALSE;
 				AutoSequence.cmd.moveRelative[2]	:= FALSE;
 				AutoSequence.state					:= WAIT;
-			END_IF;	
-			
+			END_IF;
+				
 	END_CASE;
 	
 END_PROGRAM

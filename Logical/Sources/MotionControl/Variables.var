@@ -1,3 +1,4 @@
 VAR
 	AxisSecuence : USINT;
+	CountCycle : USINT;
 END_VAR
