@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/02/2024 13:42:18" />
+    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/03/2024 11:52:55" />
   </TimeStamps>
   <Modules>
     <Module Name="4PPC70_0702_23B" Type="4PPC70.0702-23B" X="138" Y="111" />
@@ -13,6 +13,7 @@
     <Module Name="X20PS9400" Type="X20PS9400" X="550" Y="184" />
     <Module Name="X20TB12" Type="X20TB12" X="550" Y="211" />
     <Module Name="X20BC0083" Type="X20BC0083" X="525" Y="184" />
+    <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" X="667" Y="374" />
   </Modules>
   <Links>
     <Link From="4PPC70_0702_23B" To="X20BC0083" FromPort="IF1" ToPort="PLK2" IsRoutedByUser="False">
@@ -72,6 +73,16 @@
       <Point X="325.5" Y="545.1" />
       <Point X="325.5" Y="552.1" />
       <Point X="325.5" Y="552.1" />
+    </Link>
+    <Link From="4XP0043.00-00W" To="4PPC70_0702_23B" FromPort="X2X1" ToPort="IF5" IsRoutedByUser="False">
+      <Point X="731" Y="430" />
+      <Point X="731" Y="430" />
+      <Point X="731" Y="435" />
+      <Point X="731" Y="466" />
+      <Point X="219.299988" Y="466" />
+      <Point X="219.299988" Y="218" />
+      <Point X="219.299988" Y="213" />
+      <Point X="219.299988" Y="213" />
     </Link>
   </Links>
   <InfoElements />

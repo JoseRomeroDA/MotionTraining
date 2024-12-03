@@ -14,6 +14,7 @@ TYPE
 		moveAbsolute : BOOL;
 		moveRelative : ARRAY[1..2]OF BOOL;
 		home : BOOL;
+		ErrorAcknowledge : ARRAY[1..2]OF BOOL;
 	END_STRUCT;
 	AutoSequence_status_typ : 	STRUCT 
 		powerMotors : BOOL;
@@ -22,6 +23,7 @@ TYPE
 		homingDone : ARRAY[1..2]OF BOOL;
 		actPositon : ARRAY[1..2]OF REAL;
 		MoveAdditiveDone : ARRAY[1..2]OF BOOL;
+		finalPosition : ARRAY[1..2]OF BOOL;
 	END_STRUCT;
 	AutoSequence_par_typ : 	STRUCT 
 		deceleration : REAL;

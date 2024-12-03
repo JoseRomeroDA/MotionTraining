@@ -19,6 +19,11 @@
     <Parameter ID="VcObjectName" Value="Visu" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC70_0702_23B.dis" />
   </Module>
+  <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" Version="2.1.0.0">
+    <Connection Connector="X2X1" TargetModule="4PPC70_0702_23B" TargetConnector="IF5">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+  </Module>
   <Module Name="80VD100PD.C022-01" Type="80VD100PD.C022-01" Version="2.5.0.0">
     <Connection Connector="PLK2" TargetModule="X20BC0083" TargetConnector="PLK1" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />

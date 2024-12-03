@@ -34,7 +34,9 @@ VAR CONSTANT
 END_VAR
 VAR
 	MC_BR_CyclicRead_0 : MC_BR_CyclicRead;
-	Axis1SensorTemp : UDINT;
 	MC_BR_CyclicRead_1 : MC_BR_CyclicRead;
-	Axis1MotorTorque : UDINT;
+	MC_BR_CyclicRead_2 : MC_BR_CyclicRead;
+	Axis2SensorTemp : REAL;
+	Axis2MotorTorque : REAL;
+	Axis2EncoderPosition : DINT;
 END_VAR

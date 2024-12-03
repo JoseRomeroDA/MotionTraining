@@ -6,5 +6,6 @@
     <File Description="init code">basicInit.st</File>
     <File Description="Local data types" Private="true">basic.typ</File>
     <File Description="Local variables" Private="true">basic.var</File>
+    <File>BasicAxis2Action.st</File>
   </Files>
 </Program>

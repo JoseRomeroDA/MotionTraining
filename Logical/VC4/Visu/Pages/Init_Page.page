@@ -33,7 +33,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="32"/>
-          <Property Name="Left" Value="36"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
           <Property Name="MinDatapoint" Value="None"/>
@@ -41,7 +41,7 @@
           <Property Name="SimulationValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Output]"/>
           <Property Name="TeachDatapoint" Value="None"/>
-          <Property Name="Top" Value="296"/>
+          <Property Name="Top" Value="382"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Sources.MotionControl.BasicAxis1.BasicControl.Status.ActPosition]"/>
           <Property Name="ValueMode" Value="Standard"/>
           <Property Name="Width" Value="164"/>
@@ -50,7 +50,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="32"/>
-          <Property Name="Left" Value="35"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
           <Property Name="MinDatapoint" Value="None"/>
@@ -58,7 +58,7 @@
           <Property Name="SimulationValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Output]"/>
           <Property Name="TeachDatapoint" Value="None"/>
-          <Property Name="Top" Value="334"/>
+          <Property Name="Top" Value="424"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Sources.MotionControl.BasicAxis1.BasicControl.Status.ActVelocity]"/>
           <Property Name="ValueMode" Value="Standard"/>
           <Property Name="Width" Value="164"/>
@@ -67,7 +67,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="32"/>
-          <Property Name="Left" Value="405"/>
+          <Property Name="Left" Value="552"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
           <Property Name="MinDatapoint" Value="None"/>
@@ -75,7 +75,7 @@
           <Property Name="SimulationValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Output]"/>
           <Property Name="TeachDatapoint" Value="None"/>
-          <Property Name="Top" Value="297"/>
+          <Property Name="Top" Value="387"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Sources.MotionControl.BasicAxis2.BasicControl.Status.ActPosition]"/>
           <Property Name="ValueMode" Value="Standard"/>
           <Property Name="Width" Value="164"/>
@@ -84,7 +84,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="32"/>
-          <Property Name="Left" Value="407"/>
+          <Property Name="Left" Value="553"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
           <Property Name="MinDatapoint" Value="None"/>
@@ -92,7 +92,7 @@
           <Property Name="SimulationValue" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Output]"/>
           <Property Name="TeachDatapoint" Value="None"/>
-          <Property Name="Top" Value="338"/>
+          <Property Name="Top" Value="423"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Sources.MotionControl.BasicAxis2.BasicControl.Status.ActVelocity]"/>
           <Property Name="ValueMode" Value="Standard"/>
           <Property Name="Width" Value="164"/>
@@ -105,14 +105,14 @@
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_1]"/>
           <Property Name="Height" Value="48"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="56"/>
+          <Property Name="Left" Value="210"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
-          <Property Name="Top" Value="163"/>
+          <Property Name="Top" Value="18"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_1]"/>
           <Property Name="Width" Value="47"/>
         </Control>
@@ -124,14 +124,14 @@
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_2]"/>
           <Property Name="Height" Value="48"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="148"/>
+          <Property Name="Left" Value="268"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
-          <Property Name="Top" Value="161"/>
+          <Property Name="Top" Value="19"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_2]"/>
           <Property Name="Width" Value="47"/>
         </Control>
@@ -143,14 +143,14 @@
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_3]"/>
           <Property Name="Height" Value="48"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="227"/>
+          <Property Name="Left" Value="327"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
-          <Property Name="Top" Value="159"/>
+          <Property Name="Top" Value="19"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_3]"/>
           <Property Name="Width" Value="47"/>
         </Control>
@@ -172,22 +172,6 @@
             </KeyAction>
           </KeyActions>
         </VirtualKey>
-        <VirtualKey Name="%embVirtualKey_3">
-          <Property Name="Description" Value=""/>
-          <Property Name="VirtualKey_LED" Value="False"/>
-          <KeyActions>
-            <KeyAction ClassId="0x0000016B">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
-              <Property Name="Description" Value=""/>
-              <Property Name="Locking" Value="Never"/>
-              <Property Name="Name" Value="Action_0"/>
-              <Property Name="ResetValue" Value="0"/>
-              <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.AutoSequence.io.di_StopSequence]"/>
-            </KeyAction>
-          </KeyActions>
-        </VirtualKey>
         <VirtualKey Name="%embVirtualKey_2">
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
@@ -201,6 +185,22 @@
               <Property Name="ResetValue" Value="0"/>
               <Property Name="SetValue" Value="1"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.AutoSequence.io.di_StartSequence]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="%embVirtualKey_3">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x0000016B">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="ResetValue" Value="0"/>
+              <Property Name="SetValue" Value="1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.AutoSequence.io.di_StopSequence]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

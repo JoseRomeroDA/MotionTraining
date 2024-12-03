@@ -1,4 +1,5 @@
 VAR
 	AxisSecuence : USINT;
 	CountCycle : USINT;
+	TON_TurnOffMotors : TON;
 END_VAR

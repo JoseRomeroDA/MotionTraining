@@ -13,18 +13,9 @@ PROGRAM _CYCLIC
 (***************************************************************
         Control Sequence
 ***************************************************************)
-	BasicControl.Command.Power			:= AutoSequence.cmd.powerMotor;
-	BasicControl.Command.Home			:= AutoSequence.cmd.home;
-	BasicControl.Command.MoveAbsolute	:= AutoSequence.cmd.moveAbsolute;
-	BasicControl.Command.MoveAdditive	:= AutoSequence.cmd.moveRelative[2];
-	BasicControl.Command.Stop			:= AutoSequence.cmd.stopMotor;
-	
-	BasicControl.Parameter.Acceleration	:= AutoSequence.par.acceleration;
-	BasicControl.Parameter.Deceleration	:= AutoSequence.par.deceleration;
-	BasicControl.Parameter.Direction	:= AutoSequence.par.direction;
-	BasicControl.Parameter.Velocity		:= AutoSequence.par.speedMovement;
-	BasicControl.Parameter.Distance		:= AutoSequence.par.distance[2];	
-	
+	Axis2Cmd;
+	Axis2Param;
+	Axis2CyclicReadAction;
 	
 (* status information is read before the step sequencer to attain a shorter reaction time *)
 (************************ MC_READSTATUS *************************)
@@ -396,6 +387,11 @@ CASE AxisStep OF
         END_IF
 (******************** SEQUENCE END *************************)
 END_CASE
+	
+	AutoSequence.status.actPositon[2]	:= BasicControl.Status.ActPosition;
+	AutoSequence.status.homingDone[2]	:= BasicControl.Status.DriveStatus.HomingOk;
+	AutoSequence.status.MoveAdditiveDone[2]	:=	MC_MoveAdditive_0.Done;
+	
 
 (***************************************************************
         Function Block Calls
@@ -434,12 +430,6 @@ MC_Reset_0.Axis := Axis1Obj;
 MC_Reset_0();
 
 	
-	MC_BR_CyclicRead_0();
-	MC_BR_CyclicRead_1();
-	
-	AutoSequence.status.actPositon[2]	:= BasicControl.Status.ActPosition;
-	AutoSequence.status.homingDone[2]	:= BasicControl.Status.DriveStatus.HomingOk;
-	AutoSequence.status.MoveAdditiveDone[2]	:=	MC_MoveAdditive_0.Done;
-	
+
 END_PROGRAM
 
