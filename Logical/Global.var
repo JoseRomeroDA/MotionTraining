@@ -1,0 +1,5 @@
+VAR
+	gAxis01 : ACP10AXIS_typ;
+	gAxis02 : ACP10AXIS_typ;
+	AutoSequence : AutoSequence_typ;
+END_VAR

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration xmlns="http://br-automation.co.at/AS/Configuration">
+  <Objects>
+    <Object Type="File" Description="Hardware configuration">Hardware.hw</Object>
+    <Object Type="File" Description="Hardware topology">Hardware.hwl</Object>
+    <Object Type="Cpu" Description="Proyecto para realizar las practicas realizada para el curso de motion 27-11-24">4PPC70_0702_23B</Object>
+    <Object Type="File">Hardware.jpg</Object>
+  </Objects>
+  <Sources Download="false" IncludeUpgrades="true" Mode="ProjectTransfer" Option="Complete" />
+</Configuration>
