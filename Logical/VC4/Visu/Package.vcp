@@ -6,7 +6,7 @@
   <Property Name="BeepTouch" Value="False"/>
   <Property Name="CalibrationDatapoint" Value="None"/>
   <Property Name="CalibrationStateDatapoint" Value="None"/>
-  <Property Name="ColorMode" Value="8Bit"/>
+  <Property Name="ColorMode" Value="32Bit"/>
   <Property Name="ConfigureTemplate" Value="0"/>
   <Property Name="ConnectionErrorPage" Value="None"/>
   <Property Name="DefaultKeyLevelNumeric" Value="0"/>
@@ -15,7 +15,7 @@
   <Property Name="DefaultPage" Value="Source[local].Page[Init_Page]"/>
   <Property Name="DefaultStyleSheet" Value="Source[local].StyleSheet[Color]"/>
   <Property Name="FocusControlDatapoint" Value="None"/>
-  <Property Name="FontAntialiasing" Value="Off"/>
+  <Property Name="FontAntialiasing" Value="On"/>
   <Property Name="HelpControlDatapoint" Value="None"/>
   <Property Name="IPAddressDatapoint" Value="None"/>
   <Property Name="KeyLevelChangeDatapoint" Value="None"/>
@@ -118,6 +118,12 @@
     <Source File="Bitmaps\zuneListPadVer_pressed.bminfo"/>
     <Source File="Bitmaps\zuneNumPad_pressed.bminfo"/>
     <Source File="Bitmaps\error.bminfo"/>
+    <Source File="Bitmaps\PowerOff.bminfo"/>
+    <Source File="Bitmaps\PowerOn.bminfo"/>
+    <Source File="Bitmaps\stopicon.bminfo"/>
+    <Source File="Bitmaps\OperacionManual.bminfo"/>
+    <Source File="Bitmaps\InicioCicloAuto.bminfo"/>
+    <Source File="Bitmaps\LampV3Trans_70x70.bminfo"/>
     <Source File="BitmapGroups\AlphaPadQVGA.bmgrp"/>
     <Source File="BitmapGroups\NumPad.bmgrp"/>
     <Source File="BitmapGroups\AlphaPad.bmgrp"/>
@@ -128,6 +134,8 @@
     <Source File="BitmapGroups\NavigationPad.bmgrp"/>
     <Source File="BitmapGroups\Borders.bmgrp"/>
     <Source File="BitmapGroups\BitmapAxisGroup.bmgrp"/>
+    <Source File="BitmapGroups\BitmapCommandGroup.bmgrp"/>
+    <Source File="BitmapGroups\BitmapGroup_1.bmgrp"/>
     <Source File="Pages\Init_Page.page"/>
     <Source File="StyleSheets\Gray.vcs"/>
     <Source File="StyleSheets\Color.vcs"/>
@@ -165,6 +173,7 @@
     <Source File="Borders\UpActiveControl.bdr"/>
     <Source File="Borders\UpPressedControl.bdr"/>
     <Source File="Borders\FrameHeader.bdr"/>
+    <Source File="Borders\Border_Invisible.bdr"/>
     <Source File="TouchPads\NumPad.tpr"/>
     <Source File="TouchPads\AlphaPadQVGA.tpr"/>
     <Source File="TouchPads\AlphaPad.tpr"/>

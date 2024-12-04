@@ -56,19 +56,6 @@
                 <Property Name="VCType" Value="INTEGER"/>
               </DataPoint>
             </Folder>
-            <Folder Name="Command">
-              <Property Name="Description" Value=""/>
-              <Property Name="FolderType" Value="Struct"/>
-              <DataPoint Name="Power">
-                <Property Name="ConnectedBySharedResource" Value="False"/>
-                <Property Name="ConnectingVisus" Value="VC4\Visu"/>
-                <Property Name="Description" Value=""/>
-                <Property Name="PLCType" Value="BOOL"/>
-                <Property Name="UpdateTime" Value="Default"/>
-                <Property Name="UserID" Value="None"/>
-                <Property Name="VCType" Value="BOOL"/>
-              </DataPoint>
-            </Folder>
             <Folder Name="Parameter">
               <Property Name="Description" Value=""/>
               <Property Name="FolderType" Value="Struct"/>
@@ -138,6 +125,18 @@
                 <Property Name="UserID" Value="None"/>
                 <Property Name="VCType" Value="INTEGER"/>
               </DataPoint>
+              <DataPoint Name="ActVelocity">
+                <Property Name="ConnectedBySharedResource" Value="False"/>
+                <Property Name="ConnectingVisus" Value="VC4\Visu"/>
+                <Property Name="DPLimit" Value="None"/>
+                <Property Name="Description" Value=""/>
+                <Property Name="PLCType" Value="REAL"/>
+                <Property Name="PLCUnit" Value="None"/>
+                <Property Name="UnitGroup" Value="None"/>
+                <Property Name="UpdateTime" Value="Default"/>
+                <Property Name="UserID" Value="None"/>
+                <Property Name="VCType" Value="SCALED"/>
+              </DataPoint>
             </Folder>
           </Folder>
           <DataPoint Name="Axis2EncoderPosition">
@@ -179,37 +178,6 @@
     <Folder Name="AutoSequence">
       <Property Name="Description" Value=""/>
       <Property Name="FolderType" Value="Struct"/>
-      <Folder Name="io">
-        <Property Name="Description" Value=""/>
-        <Property Name="FolderType" Value="Struct"/>
-        <DataPoint Name="di_PowerMotors">
-          <Property Name="ConnectedBySharedResource" Value="False"/>
-          <Property Name="ConnectingVisus" Value="VC4\Visu"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="PLCType" Value="BOOL"/>
-          <Property Name="UpdateTime" Value="Default"/>
-          <Property Name="UserID" Value="None"/>
-          <Property Name="VCType" Value="BOOL"/>
-        </DataPoint>
-        <DataPoint Name="di_StartSequence">
-          <Property Name="ConnectedBySharedResource" Value="False"/>
-          <Property Name="ConnectingVisus" Value="VC4\Visu"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="PLCType" Value="BOOL"/>
-          <Property Name="UpdateTime" Value="Default"/>
-          <Property Name="UserID" Value="None"/>
-          <Property Name="VCType" Value="BOOL"/>
-        </DataPoint>
-        <DataPoint Name="di_StopSequence">
-          <Property Name="ConnectedBySharedResource" Value="False"/>
-          <Property Name="ConnectingVisus" Value="VC4\Visu"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="PLCType" Value="BOOL"/>
-          <Property Name="UpdateTime" Value="Default"/>
-          <Property Name="UserID" Value="None"/>
-          <Property Name="VCType" Value="BOOL"/>
-        </DataPoint>
-      </Folder>
       <Folder Name="cmd">
         <Property Name="Description" Value=""/>
         <Property Name="FolderType" Value="Struct"/>
@@ -238,6 +206,15 @@
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="BOOL"/>
           </DataPoint>
+        </DataPoint>
+        <DataPoint Name="AutoSequenceDisabled">
+          <Property Name="ConnectedBySharedResource" Value="False"/>
+          <Property Name="ConnectingVisus" Value="VC4\Visu"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="PLCType" Value="BOOL"/>
+          <Property Name="UpdateTime" Value="Default"/>
+          <Property Name="UserID" Value="None"/>
+          <Property Name="VCType" Value="BOOL"/>
         </DataPoint>
       </Folder>
       <Folder Name="status">
@@ -303,6 +280,49 @@
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="SCALED"/>
+          </DataPoint>
+        </DataPoint>
+      </Folder>
+    </Folder>
+    <Folder Name="VC4">
+      <Property Name="Description" Value=""/>
+      <Property Name="FolderType" Value="Package"/>
+      <Folder Name="VisCtrl">
+        <Property Name="Description" Value=""/>
+        <Property Name="FolderType" Value="Program"/>
+        <DataPoint Name="ShapeColor">
+          <Property Name="ConnectedBySharedResource" Value="False"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="PLCType" Value="USINT[1..3]"/>
+          <Property Name="UpdateTime" Value="Default"/>
+          <Property Name="UserID" Value="None"/>
+          <Property Name="VCType" Value="INTEGER[]"/>
+          <DataPoint Name="ShapeColor[1]">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="VC4\Visu"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="USINT"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="INTEGER"/>
+          </DataPoint>
+          <DataPoint Name="ShapeColor[2]">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="VC4\Visu"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="USINT"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="INTEGER"/>
+          </DataPoint>
+          <DataPoint Name="ShapeColor[3]">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="VC4\Visu"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="USINT"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="INTEGER"/>
           </DataPoint>
         </DataPoint>
       </Folder>

@@ -34,9 +34,9 @@
     <Text ID="95089" Value="     Act Encoder Pos"/>
     <Text ID="95090" Value="Run"/>
     <Text ID="95091" Value=""/>
-    <Text ID="95092" Value=""/>
-    <Text ID="95093" Value=""/>
-    <Text ID="95094" Value=""/>
+    <Text ID="95092" Value="Commands"/>
+    <Text ID="95093" Value="Parameters"/>
+    <Text ID="95094" Value="Actual Values"/>
     <Text ID="95095" Value="Axis2"/>
     <Text ID="95096" Value="Axis1"/>
     <Text ID="95097" Value=""/>

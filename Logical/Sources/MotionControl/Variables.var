@@ -2,4 +2,5 @@ VAR
 	AxisSecuence : USINT;
 	CountCycle : USINT;
 	TON_TurnOffMotors : TON;
+	PWM_Active : MTBasicsPWM;
 END_VAR

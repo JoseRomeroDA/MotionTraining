@@ -5,11 +5,11 @@
   <Property Name="Index" Value="9"/>
   <Property Name="Translate" Value="False"/>
   <BitmapLayer LanguageId="neutral">
-    <BitmapRef ID="412" Value="Source[local].Bitmap[error]"/>
-    <BitmapRef ID="413" Value="None"/>
+    <BitmapRef ID="412" Value="Source[local].Bitmap[PowerOff]"/>
+    <BitmapRef ID="413" Value="Source[local].Bitmap[PowerOn]"/>
     <BitmapRef ID="414" Value="None"/>
-    <BitmapRef ID="415" Value="None"/>
-    <BitmapRef ID="416" Value="None"/>
+    <BitmapRef ID="415" Value="Source[local].Bitmap[OperacionManual]"/>
+    <BitmapRef ID="416" Value="Source[local].Bitmap[InicioCicloAuto]"/>
     <BitmapRef ID="417" Value="None"/>
     <BitmapRef ID="418" Value="None"/>
     <BitmapRef ID="419" Value="None"/>

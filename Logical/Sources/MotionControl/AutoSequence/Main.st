@@ -10,46 +10,96 @@ PROGRAM _CYCLIC
 	AutoSequence.status.startMotors	:= AutoSequence.io.di_StartSequence;
 	AutoSequence.status.stopMotor	:= AutoSequence.io.di_StopSequence;
 	
-	TON_TurnOffMotors.PT	:= T#3s;
+	AutoSequence.par.homePosition[1]	:= 80;
+	AutoSequence.par.homePosition[2]	:= 90;
+	
+	TON_TurnOffMotors.PT	:= T#2s;
 
 	IF EDGEPOS(AutoSequence.status.powerMotors)  THEN
-		AutoSequence.cmd.powerMotor	:= TRUE;	
+		AutoSequence.status.doPowerMotorsOff 		:= FALSE;
+		AutoSequence.status.doPowerMotorsON			:= TRUE;
+		AutoSequence.status.doStartCycleActive 		:= FALSE;
+		AutoSequence.status.doStartCycleInactive	:= TRUE;
+		AutoSequence.status.doStopCycleInactive		:= FALSE;
+		AutoSequence.status.doStopCycleActive		:= FALSE;
+		AutoSequence.cmd.powerMotor					:= TRUE;		
 	END_IF;
+	
 	IF (AutoSequence.status.powerMotors)  THEN
 		TON_TurnOffMotors.IN	:= TRUE;
-		IF TON_TurnOffMotors.Q	THEN
-			AutoSequence.cmd.powerMotor	:= FALSE;	
-		END_IF;
 	ELSE 
 		TON_TurnOffMotors.IN := FALSE;
 	END_IF;
+	IF TON_TurnOffMotors.Q  OR (AutoSequence.state = ERROR)
+		OR (AutoSequence.status.stopMotor) 	THEN
+		AutoSequence.cmd.powerMotor					:= FALSE;
+		AutoSequence.cmd.moveRelative[1]			:= FALSE;
+		AutoSequence.cmd.moveRelative[2]			:= FALSE;
+		AutoSequence.status.doPowerMotorsOff 		:= TRUE;
+		AutoSequence.status.doPowerMotorsON			:= FALSE;
+		AutoSequence.status.doStartCycleInactive 	:= TRUE;
+		AutoSequence.status.doStartCycleActive		:= FALSE;
+		AutoSequence.status.doStopCycleInactive		:= FALSE;
+		AutoSequence.status.doStopCycleActive		:= TRUE;
+		AutoSequence.state	 := WAIT;
+	END_IF;
 	
-	
+	IF EDGENEG (AutoSequence.status.stopMotor) THEN
+		AutoSequence.status.doStopCycleActive		:= FALSE;
+		
+	END_IF;	
 	IF AutoSequence.state <> (STEP_8) THEN
-		AutoSequence.par.speedMovement		:= 720;
+		AutoSequence.par.speedMovement		:= 100;
 		AutoSequence.par.acceleration		:= 7200;
 		AutoSequence.par.deceleration		:= 7200;
-	ELSE 
-		AutoSequence.par.speedMovement		:= 1440;//1440;
+	ELSIF AutoSequence.state = (STEP_8) THEN
+		AutoSequence.par.speedMovement		:= 100;
 		AutoSequence.par.acceleration		:= 7200;
 		AutoSequence.par.deceleration		:= 7200;
+	ELSIF AutoSequence.cmd.AutoSequenceDisabled THEN
+		AutoSequence.par.speedMovement;
+		AutoSequence.par.acceleration;
+		AutoSequence.par.deceleration;
 	END_IF
 	
 	IF AutoSequence.state = (STEP_8) THEN
 		AutoSequence.par.direction	:= AXIS_SHIFT_REVERSE; 	//Reverse
-	ELSE
+	ELSIF AutoSequence.state <> (STEP_8) THEN
 		AutoSequence.par.direction	:= AXIS_SHIFT_FORWARD;	//Forward
+	ELSIF AutoSequence.cmd.AutoSequenceDisabled	THEN		
+		AutoSequence.par.direction;
 	END_IF;
 	
 	IF AutoSequence.status.errorActive[1] OR AutoSequence.status.errorActive[2] THEN
-		AutoSequence.state	 := ERROR; 
+		PWM_Active.Enable				:= TRUE;
+		PWM_Active.Period				:= 3;
+		PWM_Active.DutyCycle			:= 50;
+		AutoSequence.status.doErrorActive	:= PWM_Active.Out;
+		AutoSequence.state	:= ERROR; 
 	END_IF;
 	
+	IF EDGEPOS (AutoSequence.cmd.AutoSequenceDisabled) THEN
+		AutoSequence.cmd.powerMotor			:= FALSE;
+		AutoSequence.cmd.moveRelative[1]	:= FALSE;
+		AutoSequence.cmd.moveRelative[2]	:= FALSE;	
+		AutoSequence.cmd.home				:= FALSE;
+		AutoSequence.par.homeMode			:= mcHOME_DEFAULT;
+		AutoSequence.status.doPowerMotorsOff 		:= FALSE;
+		AutoSequence.status.doPowerMotorsON			:= FALSE;
+		AutoSequence.status.doStartCycleInactive 	:= FALSE;
+		AutoSequence.status.doStartCycleActive		:= FALSE;
+		AutoSequence.status.doStopCycleInactive		:= FALSE;
+		AutoSequence.status.doStopCycleActive		:= FALSE;
+		AutoSequence.state	:= MANUAL;
+	END_IF;
 		
 	CASE AutoSequence.state OF
+		
+		
 		WAIT:
+			
 			IF	AutoSequence.cmd.powerMotor THEN
-				AutoSequence.state				:= STEP_1;
+				AutoSequence.state							:= STEP_1;
 			END_IF;
 		  
 		STEP_1: 
@@ -57,13 +107,16 @@ PROGRAM _CYCLIC
 			
 			IF	EDGEPOS(AutoSequence.status.startMotors)  THEN
 				AutoSequence.cmd.startMotor		:= TRUE;
+				AutoSequence.cmd.homeMode		:= mcHOME_ABSOLUTE;
 				AutoSequence.cmd.home			:= TRUE;
+				AutoSequence.status.doStartCycleActive	:= TRUE;
+				AutoSequence.status.doStartCycleInactive	:= FALSE;
+				
 			END_IF;
 			
-			IF AutoSequence.status.homingDone[1] AND (AutoSequence.status.homingDone[2]) 
-				AND (AutoSequence.status.actPositon[1] = 0) AND (AutoSequence.status.actPositon[2] = 0) 
-				AND (AutoSequence.cmd.startMotor) THEN
-				 AutoSequence.cmd.startMotor	:= FALSE;
+			IF AutoSequence.status.homingDone[1] AND (AutoSequence.status.homingDone[2]) AND (AutoSequence.cmd.startMotor) THEN
+				AutoSequence.cmd.startMotor		:= FALSE;
+				AutoSequence.cmd.homeMode		:= mcHOME_DEFAULT;
 				AutoSequence.cmd.home			:= FALSE;
 				AutoSequence.state				:= STEP_2;
 			END_IF;
@@ -153,6 +206,8 @@ PROGRAM _CYCLIC
 			IF AutoSequence.status.finalPosition[1] AND AutoSequence.status.finalPosition[2] THEN
 				AutoSequence.status.finalPosition[1]	:= FALSE;
 				AutoSequence.status.finalPosition[2]	:= FALSE;
+				AutoSequence.status.doStartCycleActive	:= FALSE;
+				AutoSequence.status.doStartCycleInactive	:= TRUE;
 				AutoSequence.state						:= WAIT;
 			END_IF;
 			
@@ -160,13 +215,42 @@ PROGRAM _CYCLIC
 			AutoSequence.cmd.moveRelative[1]	:= FALSE;
 			AutoSequence.cmd.moveRelative[2]	:= FALSE;
 			
-			IF NOT(AutoSequence.status.errorActive[1]) AND NOT(AutoSequence.status.errorActive[2]) THEN
+			AutoSequence.status.doManualMode 	:= FALSE;
+			AutoSequence.status.doPowerMotorsON	:= FALSE;
+			AutoSequence.status.doPowerMotorsOff:= FALSE;
+			
+			IF NOT(AutoSequence.status.errorActive[1]) AND NOT(AutoSequence.status.errorActive[2])
+				AND NOT (AutoSequence.cmd.AutoSequenceDisabled) THEN
+				AutoSequence.state	:= WAIT;
+			ELSIF	NOT(AutoSequence.status.errorActive[1]) AND NOT(AutoSequence.status.errorActive[2])
+				AND AutoSequence.cmd.AutoSequenceDisabled THEN
+				AutoSequence.state	:= MANUAL;
+			END_IF;
+			
+		MANUAL:
+			
+			//MANUAL MODE ACTIVE		
+			PWM_Active.Enable					:= TRUE;
+			PWM_Active.Period					:= 3;
+			PWM_Active.DutyCycle				:= 50;
+			AutoSequence.status.doManualMode	:= PWM_Active.Out;
+			
+			IF NOT(AutoSequence.cmd.AutoSequenceDisabled) THEN
+				AutoSequence.status.doManualMode:= FALSE;
 				AutoSequence.state	:= WAIT;
 			END_IF;
-		
+			
 	END_CASE;
 	
+	AutoSequence.io.do_errorActive			:= AutoSequence.status.doErrorActive;
+	AutoSequence.io.do_manualMode			:= AutoSequence.status.doManualMode;
+	AutoSequence.io.do_powerMotorsOff		:= AutoSequence.status.doPowerMotorsOff;
+	AutoSequence.io.do_powerMotorsON		:= AutoSequence.status.doPowerMotorsON;
+	AutoSequence.io.do_startCycleActive		:= AutoSequence.status.doStartCycleActive;
+	AutoSequence.io.do_startCycleInactive	:= AutoSequence.status.doStartCycleInactive;
+	AutoSequence.io.do_stopCycleActive		:= AutoSequence.status.doStopCycleActive;
 	
+	PWM_Active();
 	TON_TurnOffMotors();
 	
 END_PROGRAM

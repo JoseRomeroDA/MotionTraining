@@ -11,7 +11,5 @@
   <Property Name="FillAreaTop" Value="0"/>
   <Property Name="FillAreas" Value="0"/>
   <Property Name="Index" Value="74"/>
-  <Property Name="TargetFormat" Value="Raw8Bit"/>
-  <Property Name="Transparent" Value="True"/>
-  <Property Name="TransparentColor" Value="255"/>
+  <Property Name="TargetFormat" Value="Png32Bit"/>
 </Bitmap>

@@ -390,7 +390,7 @@ CASE AxisStep OF
 END_CASE
 
 	AutoSequence.status.actPositon[1]			:= BasicControl.Status.ActPosition;
-	AutoSequence.status.homingDone[1]			:= BasicControl.Status.DriveStatus.HomingOk;
+	AutoSequence.status.homingDone[1]			:= MC_Home_0.Done;
 	AutoSequence.status.MoveAdditiveDone[1]		:= MC_MoveAdditive_0.Done;
 	
 	//ERROR OCCURRED

@@ -11,7 +11,7 @@ ACTION Axis1CyclicReadAction:
 	
 	MC_BR_CyclicRead_1.Axis			:= ADR(gAxis01);
 	MC_BR_CyclicRead_1.Enable		:= TRUE;
-	MC_BR_CyclicRead_1.ParID		:= ACP10PAR_MOTOR_TORQ_RATED; 
+	MC_BR_CyclicRead_1.ParID		:= ACP10PAR_TORQUE_ACT; 
 	MC_BR_CyclicRead_1.DataAddress	:= ADR(Axis1MotorTorque);
 	MC_BR_CyclicRead_1.DataType		:= ncPAR_TYP_REAL;	
 	MC_BR_CyclicRead_1.Mode			:= mcEVERY_RECORD;
@@ -34,6 +34,8 @@ ACTION Axis1Param :
 	BasicControl.Parameter.Direction	:= AutoSequence.par.direction;
 	BasicControl.Parameter.Velocity		:= AutoSequence.par.speedMovement;
 	BasicControl.Parameter.Distance		:= AutoSequence.par.distance[1];
+	BasicControl.Parameter.HomePosition	:= AutoSequence.par.homePosition[1];
+	BasicControl.Parameter.HomeMode		:= AutoSequence.par.homeMode;
 END_ACTION
 
 ACTION Axis1Cmd :
