@@ -392,6 +392,14 @@ END_CASE
 	AutoSequence.status.actPositon[1]			:= BasicControl.Status.ActPosition;
 	AutoSequence.status.homingDone[1]			:= BasicControl.Status.DriveStatus.HomingOk;
 	AutoSequence.status.MoveAdditiveDone[1]		:= MC_MoveAdditive_0.Done;
+	
+	//ERROR OCCURRED
+	IF BasicControl.Status.ErrorID <> 0 THEN
+		AutoSequence.status.errorActive[1]	:= TRUE;
+	ELSE
+		AutoSequence.status.errorActive[1]	:= FALSE;
+	END_IF;
+	
 (***************************************************************
         Function Block Calls
 ***************************************************************)

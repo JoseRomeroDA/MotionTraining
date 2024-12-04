@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.11.2.75"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="TextAxisGroup">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="2"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="95063" Value="Power"/>
+    <Text ID="95064" Value="Home"/>
+    <Text ID="95065" Value="MoveAbsolute"/>
+    <Text ID="95066" Value="MoveAdditive"/>
+    <Text ID="95067" Value="MoveVelocity"/>
+    <Text ID="95068" Value="Halt"/>
+    <Text ID="95069" Value="Stop"/>
+    <Text ID="95070" Value="MoveJogPos"/>
+    <Text ID="95071" Value="MoveJogNeg"/>
+    <Text ID="95072" Value="ErrorAcknowledge"/>
+    <Text ID="95073" Value=""/>
+    <Text ID="95074" Value="     Position"/>
+    <Text ID="95075" Value="     Distance"/>
+    <Text ID="95076" Value="     Velocity"/>
+    <Text ID="95077" Value="     Direction"/>
+    <Text ID="95078" Value="     Acceleration"/>
+    <Text ID="95079" Value="     Deceleration"/>
+    <Text ID="95080" Value="     HomePosition"/>
+    <Text ID="95081" Value="     HomeMode"/>
+    <Text ID="95082" Value="     JogVelocity"/>
+    <Text ID="95083" Value=""/>
+    <Text ID="95084" Value="     ErrorID"/>
+    <Text ID="95085" Value="     ErrorText"/>
+    <Text ID="95086" Value=""/>
+    <Text ID="95087" Value="     Act Torque "/>
+    <Text ID="95088" Value="     Act Motor Temp"/>
+    <Text ID="95089" Value="     Act Encoder Pos"/>
+    <Text ID="95090" Value="Run"/>
+    <Text ID="95091" Value=""/>
+    <Text ID="95092" Value=""/>
+    <Text ID="95093" Value=""/>
+    <Text ID="95094" Value=""/>
+    <Text ID="95095" Value="Axis2"/>
+    <Text ID="95096" Value="Axis1"/>
+    <Text ID="95097" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="de">
+    <Text ID="95063" Value=""/>
+    <Text ID="95064" Value=""/>
+    <Text ID="95065" Value=""/>
+    <Text ID="95066" Value=""/>
+    <Text ID="95067" Value=""/>
+    <Text ID="95068" Value=""/>
+    <Text ID="95069" Value=""/>
+    <Text ID="95070" Value=""/>
+    <Text ID="95071" Value=""/>
+    <Text ID="95072" Value=""/>
+    <Text ID="95073" Value=""/>
+    <Text ID="95074" Value=""/>
+    <Text ID="95075" Value=""/>
+    <Text ID="95076" Value=""/>
+    <Text ID="95077" Value=""/>
+    <Text ID="95078" Value=""/>
+    <Text ID="95079" Value=""/>
+    <Text ID="95080" Value=""/>
+    <Text ID="95081" Value=""/>
+    <Text ID="95082" Value=""/>
+    <Text ID="95083" Value=""/>
+    <Text ID="95084" Value=""/>
+    <Text ID="95085" Value=""/>
+    <Text ID="95086" Value=""/>
+    <Text ID="95087" Value=""/>
+    <Text ID="95088" Value=""/>
+    <Text ID="95089" Value=""/>
+    <Text ID="95090" Value=""/>
+    <Text ID="95091" Value=""/>
+    <Text ID="95092" Value=""/>
+    <Text ID="95093" Value=""/>
+    <Text ID="95094" Value=""/>
+    <Text ID="95095" Value=""/>
+    <Text ID="95096" Value=""/>
+    <Text ID="95097" Value=""/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95063" Value="3"/>
+    <Index ID="95064" Value="4"/>
+    <Index ID="95065" Value="5"/>
+    <Index ID="95066" Value="6"/>
+    <Index ID="95067" Value="7"/>
+    <Index ID="95068" Value="8"/>
+    <Index ID="95069" Value="9"/>
+    <Index ID="95070" Value="10"/>
+    <Index ID="95071" Value="11"/>
+    <Index ID="95072" Value="12"/>
+    <Index ID="95073" Value="13"/>
+    <Index ID="95074" Value="14"/>
+    <Index ID="95075" Value="15"/>
+    <Index ID="95076" Value="16"/>
+    <Index ID="95077" Value="17"/>
+    <Index ID="95078" Value="18"/>
+    <Index ID="95079" Value="19"/>
+    <Index ID="95080" Value="20"/>
+    <Index ID="95081" Value="21"/>
+    <Index ID="95082" Value="22"/>
+    <Index ID="95083" Value="23"/>
+    <Index ID="95084" Value="24"/>
+    <Index ID="95085" Value="25"/>
+    <Index ID="95086" Value="26"/>
+    <Index ID="95087" Value="27"/>
+    <Index ID="95088" Value="28"/>
+    <Index ID="95089" Value="29"/>
+    <Index ID="95090" Value="30"/>
+    <Index ID="95091" Value="31"/>
+    <Index ID="95092" Value="32"/>
+    <Index ID="95093" Value="33"/>
+    <Index ID="95094" Value="34"/>
+    <Index ID="95095" Value="1"/>
+    <Index ID="95096" Value="0"/>
+    <Index ID="95097" Value="2"/>
+  </IndexMap>
+</TextGroup>

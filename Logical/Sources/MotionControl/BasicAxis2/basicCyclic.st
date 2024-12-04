@@ -393,6 +393,12 @@ END_CASE
 	AutoSequence.status.MoveAdditiveDone[2]	:=	MC_MoveAdditive_0.Done;
 	
 
+	//ERROR OCCURRED
+	IF BasicControl.Status.ErrorID <> 0 THEN
+		AutoSequence.status.errorActive[2]	:= TRUE;
+	ELSE
+		AutoSequence.status.errorActive[2]	:= FALSE;
+	END_IF;
 (***************************************************************
         Function Block Calls
 ***************************************************************)

@@ -24,6 +24,7 @@ TYPE
 		actPositon : ARRAY[1..2]OF REAL;
 		MoveAdditiveDone : ARRAY[1..2]OF BOOL;
 		finalPosition : ARRAY[1..2]OF BOOL;
+		errorActive : ARRAY[1..2]OF BOOL;
 	END_STRUCT;
 	AutoSequence_par_typ : 	STRUCT 
 		deceleration : REAL;
@@ -48,6 +49,7 @@ TYPE
 		STEP_6,
 		STEP_7,
 		STEP_8,
-		ERROR
+		ERROR,
+		MANUAL
 		);
 END_TYPE

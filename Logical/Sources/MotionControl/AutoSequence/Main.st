@@ -26,26 +26,28 @@ PROGRAM _CYCLIC
 	
 	
 	IF AutoSequence.state <> (STEP_8) THEN
-		AutoSequence.par.speedMovement		:= 1000;//720;
+		AutoSequence.par.speedMovement		:= 720;
 		AutoSequence.par.acceleration		:= 7200;
 		AutoSequence.par.deceleration		:= 7200;
 	ELSE 
-		AutoSequence.par.speedMovement		:= 1000;//1440;
+		AutoSequence.par.speedMovement		:= 1440;//1440;
 		AutoSequence.par.acceleration		:= 7200;
 		AutoSequence.par.deceleration		:= 7200;
 	END_IF
 	
 	IF AutoSequence.state = (STEP_8) THEN
-		AutoSequence.par.direction	:= 1; 	//Reverse
+		AutoSequence.par.direction	:= AXIS_SHIFT_REVERSE; 	//Reverse
 	ELSE
-		AutoSequence.par.direction	:= 0;	//Forward
+		AutoSequence.par.direction	:= AXIS_SHIFT_FORWARD;	//Forward
 	END_IF;
-
 	
+	IF AutoSequence.status.errorActive[1] OR AutoSequence.status.errorActive[2] THEN
+		AutoSequence.state	 := ERROR; 
+	END_IF;
+	
+		
 	CASE AutoSequence.state OF
-		WAIT: 
-			
-			
+		WAIT:
 			IF	AutoSequence.cmd.powerMotor THEN
 				AutoSequence.state				:= STEP_1;
 			END_IF;
@@ -65,6 +67,7 @@ PROGRAM _CYCLIC
 				AutoSequence.cmd.home			:= FALSE;
 				AutoSequence.state				:= STEP_2;
 			END_IF;
+			
 		
 		STEP_2: //+180° Axis 1
 			
@@ -152,11 +155,20 @@ PROGRAM _CYCLIC
 				AutoSequence.status.finalPosition[2]	:= FALSE;
 				AutoSequence.state						:= WAIT;
 			END_IF;
-				
+			
+		ERROR:
+			AutoSequence.cmd.moveRelative[1]	:= FALSE;
+			AutoSequence.cmd.moveRelative[2]	:= FALSE;
+			
+			IF NOT(AutoSequence.status.errorActive[1]) AND NOT(AutoSequence.status.errorActive[2]) THEN
+				AutoSequence.state	:= WAIT;
+			END_IF;
+		
 	END_CASE;
 	
 	
 	TON_TurnOffMotors();
+	
 END_PROGRAM
 
 PROGRAM _EXIT
