@@ -9,7 +9,7 @@
     <Task Name="AutoSequen" Source="Sources.MotionControl.AutoSequence.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#4">
-    <Task Name="VisCtrl" Source="VC4.VisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="VisuCtrl" Source="VC4.VisuCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

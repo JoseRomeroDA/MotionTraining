@@ -1,4 +1,0 @@
-VAR
-	ShapeColor : ARRAY[1..3] OF USINT;
-	i : USINT;
-END_VAR

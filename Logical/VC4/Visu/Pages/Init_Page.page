@@ -32,7 +32,7 @@
       <Controls>
         <Control ClassId="0x00001001" Name="Shape_2">
           <Property Name="BackColor" Value="45"/>
-          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisCtrl.ShapeColor[1]]"/>
+          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisuCtrl.VisuCtrl.shape.shapeLed[1]]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="69"/>
@@ -44,10 +44,9 @@
         </Control>
         <Control ClassId="0x00001001" Name="Shape_1">
           <Property Name="BackColor" Value="45"/>
-          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisCtrl.ShapeColor[2]]"/>
+          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisuCtrl.VisuCtrl.shape.shapeLed[2]]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
-          <Property Name="GroupID" Value="2"/>
           <Property Name="Height" Value="70"/>
           <Property Name="Left" Value="10"/>
           <Property Name="Shape" Value="Ellipse"/>
@@ -911,10 +910,9 @@
         </Control>
         <Control ClassId="0x00001001" Name="Shape_3">
           <Property Name="BackColor" Value="45"/>
-          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisCtrl.ShapeColor[3]]"/>
+          <Property Name="ColorDatapoint" Value="Source[global].Variable[DataSource.VC4.VisuCtrl.VisuCtrl.shape.shapeLed[3]]"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
-          <Property Name="GroupID" Value="1"/>
           <Property Name="Height" Value="70"/>
           <Property Name="Left" Value="10"/>
           <Property Name="Shape" Value="Ellipse"/>
@@ -928,7 +926,6 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="FillStyle" Value="Transparent"/>
-          <Property Name="GroupID" Value="2"/>
           <Property Name="Height" Value="70"/>
           <Property Name="IndexDatapoint" Value="None"/>
           <Property Name="Left" Value="10"/>
@@ -943,7 +940,6 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="FillStyle" Value="Transparent"/>
-          <Property Name="GroupID" Value="1"/>
           <Property Name="Height" Value="70"/>
           <Property Name="IndexDatapoint" Value="None"/>
           <Property Name="Left" Value="10"/>
@@ -965,14 +961,16 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_1]"/>
+          <Property Name="ForeColor" Value="246"/>
           <Property Name="Height" Value="80"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="0"/>
+          <Property Name="PressedBackColor" Value="246"/>
           <Property Name="PressedBitmapGroup" Value="Source[local].BitmapGroup[BitmapAxisGroup]"/>
           <Property Name="PressedBitmapIndex" Value="3"/>
           <Property Name="PressedBitmapSource" Value="MultipleBitmaps"/>
           <Property Name="PressedBorder" Value="None"/>
-          <Property Name="PressedForeColor" Value="254"/>
+          <Property Name="PressedForeColor" Value="246"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
           <Property Name="TextIndexDatapoint" Value="None"/>

@@ -3,11 +3,10 @@ ACTION LedSequenceAction:
 
 	FOR i:= 1 TO 3 DO	
 		IF AutoSequence.status.doErrorActive THEN
-			AutoSequence.io.do_LedBlue		:= FALSE;
-			AutoSequence.io.do_LedGreen[i]	:= FALSE;
-			AutoSequence.io.do_LedWhite[i]	:= FALSE;
-			AutoSequence.io.do_LedYellow[i]	:= FALSE;
-			
+			AutoSequence.io.do_LedBlue			:= FALSE;
+			AutoSequence.io.do_LedGreen[i]		:= FALSE;
+			AutoSequence.io.do_LedWhite[i]		:= FALSE;
+			AutoSequence.io.do_LedYellow[i]		:= FALSE;
 			PWM_Active.Enable					:= TRUE;
 			PWM_Active.Period					:= 2;
 			PWM_Active.DutyCycle				:= 50;
@@ -19,12 +18,10 @@ ACTION LedSequenceAction:
 		
 		
 		IF AutoSequence.cmd.AutoSequenceDisabled AND CountManualSequence <> 3 THEN
-		
-			AutoSequence.io.do_LedBlue		:= FALSE;
-			AutoSequence.io.do_LedGreen[i]	:= FALSE;
-			AutoSequence.io.do_LedWhite[i]	:= FALSE;
-			AutoSequence.io.do_LedRed[i]	:= FALSE;
-			
+			AutoSequence.io.do_LedBlue			:= FALSE;
+			AutoSequence.io.do_LedGreen[i]		:= FALSE;
+			AutoSequence.io.do_LedWhite[i]		:= FALSE;
+			AutoSequence.io.do_LedRed[i]		:= FALSE;
 			PWM_Active.Enable					:= TRUE;
 			PWM_Active.Period					:= 2;
 			PWM_Active.DutyCycle				:= 50;
@@ -66,10 +63,8 @@ ACTION LedSequenceAction:
 		END_IF;
 		
 		IF AutoSequence.status.doStopCycleActive THEN
-		(*	AutoSequence.io.do_LedGreen[3] 	:= FALSE;*)
 			AutoSequence.io.do_LedBlue		:= TRUE;
 		ELSE 
-		(*	AutoSequence.io.do_LedGreen[3] 	:= TRUE;*)
 			AutoSequence.io.do_LedBlue		:= FALSE;
 		END_IF;
 	END_IF;
