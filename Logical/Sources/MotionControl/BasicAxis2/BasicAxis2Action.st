@@ -29,16 +29,17 @@ END_ACTION
 ACTION Axis2Param :
 	BasicControl.Parameter.Acceleration	:= AutoSequence.par.acceleration;
 	BasicControl.Parameter.Deceleration	:= AutoSequence.par.deceleration;
-	BasicControl.Parameter.Direction	:= AutoSequence.par.direction;
+	BasicControl.Parameter.Direction	:= AutoSequence.par.direction[2];
 	BasicControl.Parameter.Velocity		:= AutoSequence.par.speedMovement;
 	BasicControl.Parameter.Distance		:= AutoSequence.par.distance[2];
 	BasicControl.Parameter.HomePosition	:= AutoSequence.par.homePosition[2];
+	BasicControl.Parameter.Position		:= AutoSequence.par.position[2];
 END_ACTION
 
 ACTION Axis2Cmd :
 	BasicControl.Command.Power				:= AutoSequence.cmd.powerMotor;
 	BasicControl.Command.Home				:= AutoSequence.cmd.home;
-	BasicControl.Command.MoveAbsolute		:= AutoSequence.cmd.moveAbsolute;
+	BasicControl.Command.MoveAbsolute		:= AutoSequence.cmd.moveAbsolute[2];
 	BasicControl.Command.MoveAdditive		:= AutoSequence.cmd.moveRelative[2];
 	BasicControl.Command.Stop				:= AutoSequence.cmd.stopMotor;
 	BasicControl.Command.ErrorAcknowledge	:= AutoSequence.cmd.ErrorAcknowledge[2];

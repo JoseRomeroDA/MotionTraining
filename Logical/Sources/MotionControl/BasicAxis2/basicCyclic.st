@@ -390,8 +390,8 @@ END_CASE
 	
 	AutoSequence.status.actPositon[2]		:= BasicControl.Status.ActPosition;
 	AutoSequence.status.homingDone[2]		:= MC_Home_0.Done;
-	AutoSequence.status.MoveAdditiveDone[2]	:=	MC_MoveAdditive_0.Done;
-	
+	AutoSequence.status.MoveAdditiveDone[2]	:= MC_MoveAdditive_0.Done;
+	AutoSequence.status.moveAbsoluteDone[2]	:= MC_MoveAbsolute_0.Done;
 
 	//ERROR OCCURRED
 	IF BasicControl.Status.ErrorID <> 0 THEN

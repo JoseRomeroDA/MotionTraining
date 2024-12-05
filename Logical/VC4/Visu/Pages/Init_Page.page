@@ -672,6 +672,15 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial10pxBold]"/>
           <Property Name="Height" Value="23"/>
+          <Property Name="Input" Value="True"/>
+          <Property Name="InputCancel" Value="Lost Focus"/>
+          <Property Name="InputComma" Value="Explicit"/>
+          <Property Name="InputConfirm" Value="Enter"/>
+          <Property Name="InputMinus" Value="Normal"/>
+          <Property Name="InputNext" Value="Enter"/>
+          <Property Name="InputStart" Value="Any Key"/>
+          <Property Name="InputTouchpad" Value="Source[local].TouchPad[NumPad]"/>
+          <Property Name="InputUpDown" Value="Disabled"/>
           <Property Name="Left" Value="264"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
@@ -878,6 +887,15 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Arial10pxBold]"/>
           <Property Name="Height" Value="23"/>
+          <Property Name="Input" Value="True"/>
+          <Property Name="InputCancel" Value="Lost Focus"/>
+          <Property Name="InputComma" Value="Explicit"/>
+          <Property Name="InputConfirm" Value="Enter"/>
+          <Property Name="InputMinus" Value="Normal"/>
+          <Property Name="InputNext" Value="Enter"/>
+          <Property Name="InputStart" Value="Any Key"/>
+          <Property Name="InputTouchpad" Value="Source[local].TouchPad[NumPad]"/>
+          <Property Name="InputUpDown" Value="Disabled"/>
           <Property Name="Left" Value="568"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
@@ -1017,7 +1035,20 @@
       </KeyMapping>
     </Layer>
   </Layers>
-  <MovementOrder/>
+  <MovementOrder>
+    <MovementEntry Control="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis3]">
+      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis4]"/>
+      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis4]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis4]"/>
+      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis4]"/>
+    </MovementEntry>
+    <MovementEntry Control="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis4]">
+      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis3]"/>
+      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis3]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis3]"/>
+      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[Numeric_VelocityAxis3]"/>
+    </MovementEntry>
+  </MovementOrder>
   <TabSequence>
     <TabSeqItem Index="0" Value="Source[embedded].Layer[Default].Control[Numeric_DistanceAxis1]"/>
     <TabSeqItem Index="1" Value="Source[embedded].Layer[Default].Control[Numeric_PositionAxis1]"/>

@@ -11,7 +11,7 @@ TYPE
 		powerMotor : BOOL;
 		startMotor : BOOL;
 		stopMotor : BOOL;
-		moveAbsolute : BOOL;
+		moveAbsolute : ARRAY[1..2]OF BOOL;
 		moveRelative : ARRAY[1..2]OF BOOL;
 		home : BOOL;
 		homeMode : USINT;
@@ -24,7 +24,9 @@ TYPE
 		stopMotor : BOOL;
 		homingDone : ARRAY[1..2]OF BOOL;
 		actPositon : ARRAY[1..2]OF REAL;
+		moveAbsoluteDone : ARRAY[1..2]OF BOOL;
 		MoveAdditiveDone : ARRAY[1..2]OF BOOL;
+		homePositionOk : ARRAY[1..2]OF BOOL;
 		finalPosition : ARRAY[1..2]OF BOOL;
 		errorActive : ARRAY[1..2]OF BOOL;
 		AutoSequenceDisabled : BOOL;
@@ -42,7 +44,8 @@ TYPE
 		acceleration : REAL;
 		speedMovement : REAL;
 		distance : ARRAY[1..2]OF REAL;
-		direction : USINT;
+		direction : ARRAY[1..2]OF USINT;
+		position : ARRAY[1..2]OF REAL;
 		homePosition : ARRAY[1..2]OF REAL;
 		homeMode : USINT;
 	END_STRUCT;
@@ -50,13 +53,11 @@ TYPE
 		di_PowerMotors : BOOL;
 		di_StartSequence : BOOL;
 		di_StopSequence : BOOL;
-		do_powerMotorsOff : BOOL;
-		do_powerMotorsON : BOOL;
-		do_startCycleActive : BOOL;
-		do_startCycleInactive : BOOL;
-		do_stopCycleActive : BOOL;
-		do_manualMode : BOOL;
-		do_errorActive : BOOL;
+		do_LedGreen : ARRAY[1..3]OF BOOL;
+		do_LedYellow : ARRAY[1..3]OF BOOL;
+		do_LedRed : ARRAY[1..3]OF BOOL;
+		do_LedWhite : ARRAY[1..2]OF BOOL;
+		do_LedBlue : BOOL;
 	END_STRUCT;
 	AutoSequence_state_enum : 
 		(

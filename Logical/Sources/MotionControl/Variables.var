@@ -3,4 +3,7 @@ VAR
 	CountCycle : USINT;
 	TON_TurnOffMotors : TON;
 	PWM_Active : MTBasicsPWM;
+	i : USINT;
+	CountManualSequence : USINT;
+	OldStartMotor : BOOL;
 END_VAR

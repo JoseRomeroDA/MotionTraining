@@ -13,7 +13,7 @@ PROGRAM _CYCLIC
 			ShapeColor[i]; //Negro
 		END_IF	;
 		
-		END_FOR;
+	END_FOR;
 
 		
 	IF AutoSequence.status.doPowerMotorsOff THEN
