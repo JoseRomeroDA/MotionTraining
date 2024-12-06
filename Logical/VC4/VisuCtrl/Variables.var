@@ -1,6 +1,7 @@
 VAR
 	VisuCtrl : VisuCtrl_typ;
 	PWM_ShapeActive : MTBasicsPWM;
+	CountManualSequence : USINT;
 	i : USINT;
 END_VAR
 (*VISU CONSTANTS*)
@@ -11,5 +12,4 @@ VAR
 	YELLOW_COLOR : USINT := 253;
 	BLUE_COLOR : USINT := 207;
 	WHITE_COLOR : USINT := 15;
-	CountManualSequence : USINT;
 END_VAR

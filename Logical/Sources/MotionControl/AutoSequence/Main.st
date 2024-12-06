@@ -9,10 +9,7 @@ PROGRAM _CYCLIC
 	AutoSequence.status.powerMotors	:= AutoSequence.io.di_PowerMotors;
 	AutoSequence.status.startMotors	:= AutoSequence.io.di_StartSequence;
 	AutoSequence.status.stopMotor	:= AutoSequence.io.di_StopSequence;
-	
-//	AutoSequence.par.homePosition[1]	:= 80;
-//	AutoSequence.par.homePosition[2]	:= 90;
-	
+		
 	TON_TurnOffMotors.PT	:= T#2s;
 	
 	IF NOT(AutoSequence.cmd.AutoSequenceDisabled) THEN
@@ -20,7 +17,6 @@ PROGRAM _CYCLIC
 			AutoSequence.status.doPowerMotorsOff		:= FALSE;
 			AutoSequence.status.doPowerMotorsON			:= TRUE;
 			AutoSequence.cmd.powerMotor	:= TRUE;	
-			AutoSequence.status.doPowerMotorsON	:= TRUE;
 		END_IF;
 	END_IF
 	IF (AutoSequence.status.powerMotors)  THEN
@@ -64,15 +60,6 @@ PROGRAM _CYCLIC
 		AutoSequence.par.deceleration;
 	END_IF
 	
-//	IF AutoSequence.state = (STEP_8) THEN
-//		AutoSequence.par.direction[1]	:= AXIS_SHIFT_REVERSE; 	//Reverse
-//		AutoSequence.par.direction[2]	:= AXIS_SHIFT_REVERSE; 	//Reverse
-//	ELSIF AutoSequence.state <> (STEP_8) AND AutoSequence.state <> (STEP_1)  THEN
-//		AutoSequence.par.direction[1]	:= AXIS_SHIFT_FORWARD;	//Forward
-//		AutoSequence.par.direction[2]	:= AXIS_SHIFT_FORWARD;	//Forward
-//	ELSIF AutoSequence.cmd.AutoSequenceDisabled	THEN		
-//		AutoSequence.par.direction;
-//	END_IF;
 	
 	IF AutoSequence.status.errorActive[1] OR AutoSequence.status.errorActive[2] THEN
 		AutoSequence.state	:= ERROR; 
@@ -88,11 +75,9 @@ PROGRAM _CYCLIC
 	END_IF;
 		
 	CASE AutoSequence.state OF
-		
-		
+
 		WAIT:
-			
-		
+					
 			IF	AutoSequence.cmd.powerMotor THEN
 				AutoSequence.state							:= STEP_1;
 			END_IF;
@@ -103,8 +88,8 @@ PROGRAM _CYCLIC
 				AutoSequence.cmd.startMotor					:= TRUE;
 				AutoSequence.status.doStartCycleActive		:= TRUE;
 				AutoSequence.status.doStartCycleInactive	:= FALSE;
-				AutoSequence.par.position[1]				:= 90;
-				AutoSequence.par.position[2]				:= 45;
+				AutoSequence.par.position[1];
+				AutoSequence.par.position[2];
 				AutoSequence.par.direction[1]				:= AXIS_SHIFT_FORWARD;
 				AutoSequence.par.direction[2]				:= AXIS_SHIFT_REVERSE;
 				AutoSequence.cmd.moveAbsolute[1]			:= TRUE;
@@ -136,8 +121,9 @@ PROGRAM _CYCLIC
 			
 		
 		STEP_2: //+180° Axis 1
-			
+	
 			AutoSequence.par.distance[1]		:= 180;
+			AutoSequence.par.direction[1]		:= AXIS_SHIFT_FORWARD;
 			IF NOT (AutoSequence.status.stopMotor) THEN
 				AutoSequence.cmd.moveRelative[1]	:= TRUE;
 			ELSE
@@ -152,7 +138,7 @@ PROGRAM _CYCLIC
 		STEP_3: //+180 Axis 2
 			AutoSequence.par.distance[2]		:= 180;
 			AutoSequence.cmd.moveRelative[2]	:= TRUE;
-			
+			AutoSequence.par.direction[2]		:= AXIS_SHIFT_FORWARD;
 			IF  (AutoSequence.status.MoveAdditiveDone[2]) THEN
 				AutoSequence.cmd.moveRelative[2]	:= FALSE;
 				AutoSequence.state					:= STEP_4;
@@ -160,6 +146,7 @@ PROGRAM _CYCLIC
 		
 		STEP_4: //+180 Axis 1
 			AutoSequence.par.distance[1]			:= 180;
+			AutoSequence.par.direction[1]			:= AXIS_SHIFT_FORWARD;
 			IF NOT (AutoSequence.status.stopMotor) THEN
 				AutoSequence.cmd.moveRelative[1]	:= TRUE;
 			ELSE
@@ -175,7 +162,7 @@ PROGRAM _CYCLIC
 			
 			AutoSequence.par.distance[2]		:= 180;
 			AutoSequence.cmd.moveRelative[2]	:= TRUE;
-			
+			AutoSequence.par.direction[1]		:= AXIS_SHIFT_FORWARD;
 			IF (AutoSequence.status.MoveAdditiveDone[2]) THEN
 				AutoSequence.cmd.moveRelative[2]	:= FALSE;
 				AutoSequence.state					:= STEP_6;
@@ -184,6 +171,7 @@ PROGRAM _CYCLIC
 		STEP_6: //+180 Axis 1
 			AutoSequence.par.distance[1]		:= 180;
 			AutoSequence.cmd.moveRelative[1]	:= TRUE;
+			AutoSequence.par.direction[1]		:= AXIS_SHIFT_FORWARD;
 			
 			IF AutoSequence.status.MoveAdditiveDone[1] THEN
 				AutoSequence.cmd.moveRelative[1]	:= FALSE;
@@ -193,6 +181,7 @@ PROGRAM _CYCLIC
 		STEP_7: //+180 Axis 2
 			AutoSequence.par.distance[2]		:= 180;
 			AutoSequence.cmd.moveRelative[2]	:= TRUE;
+			AutoSequence.par.direction[1]		:= AXIS_SHIFT_FORWARD;
 			
 			IF  (AutoSequence.status.MoveAdditiveDone[2]) THEN
 				AutoSequence.cmd.moveRelative[2]	:= FALSE;
@@ -205,7 +194,8 @@ PROGRAM _CYCLIC
 			AutoSequence.par.distance[1]		:= -540;
 			AutoSequence.par.distance[2]		:= -540;
 		
-			
+			AutoSequence.par.direction[1]				:= AXIS_SHIFT_REVERSE;
+			AutoSequence.par.direction[2]				:= AXIS_SHIFT_REVERSE;
 			IF ( AutoSequence.status.MoveAdditiveDone[1])  THEN			
 				AutoSequence.cmd.moveRelative[1]		:= FALSE;
 				AutoSequence.status.finalPosition[1]	:= TRUE;

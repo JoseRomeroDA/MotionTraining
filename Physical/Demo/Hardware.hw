@@ -10,7 +10,6 @@
       <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="MotionProyect01_Demo" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="4PPC70_0702_23B.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />

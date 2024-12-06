@@ -5,16 +5,20 @@
   <Property Name="Index" Value="9"/>
   <Property Name="Translate" Value="False"/>
   <BitmapLayer LanguageId="neutral">
-    <BitmapRef ID="412" Value="Source[local].Bitmap[PowerOff]"/>
-    <BitmapRef ID="413" Value="Source[local].Bitmap[PowerOn]"/>
+    <BitmapRef ID="412" Value="Source[local].Bitmap[PowerOff50x50]"/>
+    <BitmapRef ID="413" Value="Source[local].Bitmap[PowerOn50x50]"/>
     <BitmapRef ID="414" Value="None"/>
     <BitmapRef ID="415" Value="Source[local].Bitmap[OperacionManual]"/>
     <BitmapRef ID="416" Value="Source[local].Bitmap[InicioCicloAuto]"/>
     <BitmapRef ID="417" Value="None"/>
-    <BitmapRef ID="418" Value="None"/>
-    <BitmapRef ID="419" Value="None"/>
+    <BitmapRef ID="418" Value="Source[local].Bitmap[AlarmIcon50x50]"/>
+    <BitmapRef ID="419" Value="Source[local].Bitmap[AlarmInactiveIcon50x50]"/>
     <BitmapRef ID="420" Value="None"/>
-    <BitmapRef ID="421" Value="None"/>
+    <BitmapRef ID="421" Value="Source[local].Bitmap[Home50x50]"/>
+    <BitmapRef ID="434" Value="Source[local].Bitmap[HomeOK50x50]"/>
+    <BitmapRef ID="435" Value="None"/>
+    <BitmapRef ID="436" Value="Source[local].Bitmap[ReverseActive50x50]"/>
+    <BitmapRef ID="437" Value="Source[local].Bitmap[ForwardActive50x50]"/>
   </BitmapLayer>
   <IndexMap>
     <Index ID="412" Value="0"/>
@@ -23,9 +27,13 @@
     <Index ID="415" Value="3"/>
     <Index ID="416" Value="4"/>
     <Index ID="417" Value="5"/>
-    <Index ID="418" Value="6"/>
-    <Index ID="419" Value="7"/>
+    <Index ID="418" Value="7"/>
+    <Index ID="419" Value="6"/>
     <Index ID="420" Value="8"/>
     <Index ID="421" Value="9"/>
+    <Index ID="434" Value="10"/>
+    <Index ID="435" Value="11"/>
+    <Index ID="436" Value="13"/>
+    <Index ID="437" Value="12"/>
   </IndexMap>
 </BitmapGroup>

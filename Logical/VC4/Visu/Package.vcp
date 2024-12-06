@@ -124,6 +124,14 @@
     <Source File="Bitmaps\OperacionManual.bminfo"/>
     <Source File="Bitmaps\InicioCicloAuto.bminfo"/>
     <Source File="Bitmaps\LampV3Trans_70x70.bminfo"/>
+    <Source File="Bitmaps\AlarmIcon50x50.bminfo"/>
+    <Source File="Bitmaps\AlarmInactiveIcon50x50.bminfo"/>
+    <Source File="Bitmaps\Home50x50.bminfo"/>
+    <Source File="Bitmaps\HomeOK50x50.bminfo"/>
+    <Source File="Bitmaps\ReverseActive50x50.bminfo"/>
+    <Source File="Bitmaps\ForwardActive50x50.bminfo"/>
+    <Source File="Bitmaps\PowerOff50x50.bminfo"/>
+    <Source File="Bitmaps\PowerOn50x50.bminfo"/>
     <Source File="BitmapGroups\AlphaPadQVGA.bmgrp"/>
     <Source File="BitmapGroups\NumPad.bmgrp"/>
     <Source File="BitmapGroups\AlphaPad.bmgrp"/>
@@ -135,8 +143,8 @@
     <Source File="BitmapGroups\Borders.bmgrp"/>
     <Source File="BitmapGroups\BitmapAxisGroup.bmgrp"/>
     <Source File="BitmapGroups\BitmapCommandGroup.bmgrp"/>
-    <Source File="BitmapGroups\BitmapGroup_1.bmgrp"/>
     <Source File="Pages\Init_Page.page"/>
+    <Source File="Layers\CommandLayer_AutoMode.layer"/>
     <Source File="StyleSheets\Gray.vcs"/>
     <Source File="StyleSheets\Color.vcs"/>
     <Source File="Borders\Raised.bdr"/>
