@@ -1,17 +1,4 @@
+
 VAR_CONFIG
-	::AutoSequence.io.di_PowerMotors AT %IX."4XP0043.00-00W".DigitalInput01;
-	::AutoSequence.io.di_StartSequence AT %IX."4XP0043.00-00W".DigitalInput02;
-	::AutoSequence.io.di_StopSequence AT %IX."4XP0043.00-00W".DigitalInput03;
-	::AutoSequence.io.do_LedGreen[1] AT %QX."4XP0043.00-00W".DigitalOutput01;
-	::AutoSequence.io.do_LedYellow[1] AT %QX."4XP0043.00-00W".DigitalOutput02;
-	::AutoSequence.io.do_LedWhite[1] AT %QX."4XP0043.00-00W".DigitalOutput04;
-	::AutoSequence.io.do_LedGreen[2] AT %QX."4XP0043.00-00W".DigitalOutput05;
-	::AutoSequence.io.do_LedYellow[2] AT %QX."4XP0043.00-00W".DigitalOutput06;
-	::AutoSequence.io.do_LedWhite[2] AT %QX."4XP0043.00-00W".DigitalOutput08;
-	::AutoSequence.io.do_LedRed[3] AT %QX."4XP0043.00-00W".DigitalOutput11;
-	::AutoSequence.io.do_LedYellow[3] AT %QX."4XP0043.00-00W".DigitalOutput10;
-	::AutoSequence.io.do_LedBlue AT %QX."4XP0043.00-00W".DigitalOutput12;
-	::AutoSequence.io.do_LedGreen[3] AT %QX."4XP0043.00-00W".DigitalOutput09;
-	::AutoSequence.io.do_LedRed[1] AT %QX."4XP0043.00-00W".DigitalOutput03;
-	::AutoSequence.io.do_LedRed[2] AT %QX."4XP0043.00-00W".DigitalOutput07;
+
 END_VAR
