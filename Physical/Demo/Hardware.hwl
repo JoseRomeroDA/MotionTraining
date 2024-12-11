@@ -2,11 +2,91 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/10/2024 09:50:00" />
+    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/11/2024 10:39:59" />
   </TimeStamps>
   <Modules>
-    <Module Name="4PPC70_0702_23B" Type="4PPC70.0702-23B" X="100" Y="100" />
+    <Module Name="4PPC70_0702_23B" Type="4PPC70.0702-23B" X="99" Y="100" />
+    <Module Name="80VD100PD.C022-01" Type="80VD100PD.C022-01" X="140" Y="256" />
+    <Module Name="8LVA33.R0021D000-0" Type="8LVA33.R0021D000-0" X="134" Y="574" />
+    <Module Name="8LVA23.R0015D000-0" Type="8LVA23.R0015D000-0" X="134" Y="440" />
   </Modules>
-  <Links />
-  <InfoElements />
+  <Links>
+    <Link From="4PPC70_0702_23B" To="80VD100PD.C022-01" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="179.799973" Y="330" />
+      <Point X="179.799973" Y="315" />
+      <Point X="198.799973" Y="315" />
+      <Point X="205" Y="315" />
+      <Point X="205" Y="245" />
+      <Point X="133.299988" Y="245" />
+      <Point X="133.299988" Y="207" />
+      <Point X="133.299988" Y="202" />
+      <Point X="133.299988" Y="202" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA23.R0015D000-0" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
+      <Point X="155.799973" Y="446.1" />
+      <Point X="155.799973" Y="446.1" />
+      <Point X="155.799973" Y="439.1" />
+      <Point X="155.799973" Y="435" />
+      <Point X="135" Y="435" />
+      <Point X="135" Y="309" />
+      <Point X="139.799988" Y="309" />
+      <Point X="148.799988" Y="309" />
+      <Point X="148.799988" Y="309" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA33.R0021D000-0" FromPort="EC2" ToPort="EC" IsRoutedByUser="False">
+      <Point X="155.799973" Y="580.1" />
+      <Point X="155.799973" Y="580.1" />
+      <Point X="155.799973" Y="573.1" />
+      <Point X="155.799973" Y="565" />
+      <Point X="125" Y="565" />
+      <Point X="125" Y="324" />
+      <Point X="140.799973" Y="324" />
+      <Point X="162.799973" Y="324" />
+      <Point X="162.799973" Y="309" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA23.R0015D000-0" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+      <Point X="159" Y="380" />
+      <Point X="159" Y="380" />
+      <Point X="159" Y="391" />
+      <Point X="159" Y="405" />
+      <Point X="183.5" Y="405" />
+      <Point X="183.5" Y="439.1" />
+      <Point X="183.5" Y="446.1" />
+      <Point X="183.5" Y="446.1" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA33.R0021D000-0" FromPort="MT2" ToPort="MT" IsRoutedByUser="False">
+      <Point X="184" Y="380" />
+      <Point X="184" Y="380" />
+      <Point X="184" Y="391" />
+      <Point X="184" Y="405" />
+      <Point X="215" Y="405" />
+      <Point X="215" Y="535" />
+      <Point X="183.5" Y="535" />
+      <Point X="183.5" Y="573.1" />
+      <Point X="183.5" Y="580.1" />
+      <Point X="183.5" Y="580.1" />
+    </Link>
+  </Links>
+  <InfoElements>
+    <InfoElementText Id="Textbox_1" X="353.093231" Y="131.7517" Width="159.1221" Height="28.8065948">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">4PPC70_0702_23B</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_2" X="344.862854" Y="306.360748" Width="167.352478" Height="29.7805786">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">80VD100PD.C022-01</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_3" X="342.119354" Y="452.73938" Width="170.096008" Height="31.55008">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">8LVA23.R0015D000-0</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_4" X="331.1454" Y="605.0028" Width="181.069946" Height="30.17833">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">8LVA33.R0021D000-0</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+  </InfoElements>
 </BR.AS.HardwareTopology>
