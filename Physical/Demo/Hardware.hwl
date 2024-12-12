@@ -23,26 +23,26 @@
       <Point X="133.299988" Y="202" />
     </Link>
     <Link From="80VD100PD.C022-01" To="8LVA23.R0015D000-0" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
-      <Point X="155.799973" Y="446.1" />
-      <Point X="155.799973" Y="446.1" />
-      <Point X="155.799973" Y="439.1" />
-      <Point X="155.799973" Y="435" />
-      <Point X="135" Y="435" />
+      <Point X="148" Y="309" />
+      <Point X="148" Y="309" />
+      <Point X="139" Y="309" />
       <Point X="135" Y="309" />
-      <Point X="139.799988" Y="309" />
-      <Point X="148.799988" Y="309" />
-      <Point X="148.799988" Y="309" />
+      <Point X="135" Y="405" />
+      <Point X="155.5" Y="405" />
+      <Point X="155.5" Y="439.1" />
+      <Point X="155.5" Y="446.1" />
+      <Point X="155.5" Y="446.1" />
     </Link>
     <Link From="80VD100PD.C022-01" To="8LVA33.R0021D000-0" FromPort="EC2" ToPort="EC" IsRoutedByUser="False">
-      <Point X="155.799973" Y="580.1" />
-      <Point X="155.799973" Y="580.1" />
-      <Point X="155.799973" Y="573.1" />
-      <Point X="155.799973" Y="565" />
-      <Point X="125" Y="565" />
+      <Point X="162" Y="309" />
+      <Point X="162" Y="324" />
+      <Point X="139" Y="324" />
       <Point X="125" Y="324" />
-      <Point X="140.799973" Y="324" />
-      <Point X="162.799973" Y="324" />
-      <Point X="162.799973" Y="309" />
+      <Point X="125" Y="535" />
+      <Point X="155.5" Y="535" />
+      <Point X="155.5" Y="573.1" />
+      <Point X="155.5" Y="580.1" />
+      <Point X="155.5" Y="580.1" />
     </Link>
     <Link From="80VD100PD.C022-01" To="8LVA23.R0015D000-0" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
       <Point X="159" Y="380" />

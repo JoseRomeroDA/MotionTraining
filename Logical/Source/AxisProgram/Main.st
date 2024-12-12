@@ -16,6 +16,12 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	/////////// PHYSICAL INPUTS ///////////
+	AxisSequence.status.PowerMotor	:= AxisSequence.io.di_PowerMotors;	
+	AxisSequence.status.StartSequence	:= AxisSequence.io.di_StartSequence;
+	AxisSequence.status.StopSequence	:= AxisSequence.io.di_StopSequence;
+	
+	
 	(* CYCLIC AXIS *)
 	MpAxisBasic_0[1].MpLink		:= ADR(gAxis_1);
 	MpAxisBasic_0[1].Parameters	:= ADR(AxisParameters[1]);
@@ -27,6 +33,9 @@ PROGRAM _CYCLIC
 	AxisInfo[2]					:= MpAxisBasic_0[2].Info;
 	MpAxisBasic_0[2]();	
 	
+	
+	
+
 END_PROGRAM
 
 PROGRAM _EXIT
