@@ -1,0 +1,4 @@
+VAR
+	MpAxisBasic_0 : ARRAY[1..MAX_AXIS] OF MpAxisBasic;
+	i : USINT;
+END_VAR

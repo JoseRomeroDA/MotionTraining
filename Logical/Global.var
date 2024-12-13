@@ -1,5 +1,3 @@
 VAR
-	MpAxisBasic_0 : ARRAY[1..MAX_AXIS] OF MpAxisBasic;
-	AxisParameters : ARRAY[1..MAX_AXIS] OF MpAxisBasicParType;
-	AxisInfo : ARRAY[1..MAX_AXIS] OF MpAxisBasicInfoType;
+	AxisSequence : AxisSequence_typ;
 END_VAR

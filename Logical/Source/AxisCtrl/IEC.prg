@@ -5,6 +5,6 @@
     <File Description="Init, cyclic, exit code">Main.st</File>
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Private="true">Variables.var</File>
-    <File>Sequences.st</File>
+    <File>MpAxisActions.st</File>
   </Files>
 </Program>

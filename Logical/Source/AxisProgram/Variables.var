@@ -1,4 +1,0 @@
-VAR
-	AxisSequence : AxisSequence_typ;
-	i : USINT;
-END_VAR
