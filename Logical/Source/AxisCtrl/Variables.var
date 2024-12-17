@@ -1,4 +1,9 @@
 VAR
 	MpAxisBasic_0 : ARRAY[1..MAX_AXIS] OF MpAxisBasic;
 	i : USINT;
+	PermissionToStart : BOOL;
+	TON_TurnOffMotors : TON;
+	OldStartSequence : BOOL;
+	FinishSequence : ARRAY[1..MAX_AXIS] OF BOOL;
+	CountSequence : USINT;
 END_VAR

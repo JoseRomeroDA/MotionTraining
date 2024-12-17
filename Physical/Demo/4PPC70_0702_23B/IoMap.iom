@@ -1,4 +1,5 @@
-
 VAR_CONFIG
-
+	::AxisSequence.io.di_PowerMotors AT %IX."4XP0043.00-00W".DigitalInput01;
+	::AxisSequence.io.di_StartSequence AT %IX."4XP0043.00-00W".DigitalInput02;
+	::AxisSequence.io.di_StopSequence AT %IX."4XP0043.00-00W".DigitalInput03;
 END_VAR

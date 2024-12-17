@@ -1,4 +1,0 @@
-VAR
-	TON_TurnOffMotors : TON;
-	i : USINT;
-END_VAR

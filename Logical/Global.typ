@@ -8,6 +8,7 @@ TYPE
 		parameters : ARRAY[1..MAX_AXIS]OF MpAxisBasicParType;
 	END_STRUCT;
 	AxisSequence_cmd_typ : 	STRUCT 
+		AutoTune : ARRAY[1..MAX_AXIS]OF BOOL;
 		Enable : ARRAY[1..MAX_AXIS]OF BOOL;
 		ErrorReset : ARRAY[1..MAX_AXIS]OF BOOL;
 		Update : ARRAY[1..MAX_AXIS]OF BOOL;
@@ -47,7 +48,8 @@ TYPE
 	END_STRUCT;
 	AxisSequence_enum : 
 		(
-		WAIT := 0,
+		DISABLED := 0,
+		WAIT := 5,
 		STEP_1 := 10,
 		STEP_2 := 20,
 		STEP_3 := 30,

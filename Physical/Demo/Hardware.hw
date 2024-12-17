@@ -10,12 +10,20 @@
       <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="mappMotion_Demo" />
+    <Parameter ID="Simulation" Value="1" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
     <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUa_AuthenticationSecurityPolicy_EnableNone" Value="1" />
+    <Parameter ID="OpcUa_Security_AdminRole" Value="Administrators" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC70_0702_23B.dis" />
+  </Module>
+  <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" Version="2.1.0.0">
+    <Connection Connector="X2X1" TargetModule="4PPC70_0702_23B" TargetConnector="IF5">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
   </Module>
   <Module Name="80VD100PD.C022-01" Type="80VD100PD.C022-01" Version="2.5.0.0">
     <Connection Connector="PLK1" TargetModule="4PPC70_0702_23B" TargetConnector="IF1" NodeNumber="2">
