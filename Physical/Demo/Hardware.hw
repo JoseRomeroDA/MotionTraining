@@ -7,6 +7,9 @@
       <Parameter ID="Mode" Value="Manual" />
       <Parameter ID="InternetAddress" Value="192.168.150.95" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Group ID="Vnc1" />
+      <Parameter ID="VncVcObjectName1" Value="Visu" />
+      <Parameter ID="VncKeyMappingFile1" Value="VC\PS2-Keyboard.dis" />
       <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="mappMotion_Demo" />
@@ -18,6 +21,8 @@
     <Parameter ID="OpcUa_AuthenticationSecurityPolicy_EnableNone" Value="1" />
     <Parameter ID="OpcUa_Security_AdminRole" Value="Administrators" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
+    <Parameter ID="VcObjectName" Value="Visu" />
+    <Parameter ID="KeyMatrixPriority" Value="HigherCyclic1" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC70_0702_23B.dis" />
   </Module>
   <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" Version="2.1.0.0">

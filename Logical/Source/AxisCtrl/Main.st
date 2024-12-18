@@ -74,9 +74,10 @@ PROGRAM _CYCLIC
 			MpAxisBasic_0[i].MoveAbsolute	:= FALSE;
 			MpAxisBasic_0[i].MoveAdditive	:= FALSE;
 			MpAxisBasic_0[i].MoveVelocity	:= FALSE;
-			MpAxisBasic_0[i].Stop			:= TRUE;
+			//MpAxisBasic_0[i].Stop			:= TRUE;
+			AxisSequence.state	 			:= WAIT;
 		ELSE
-			MpAxisBasic_0[i].Stop 		:= FALSE;
+			//MpAxisBasic_0[i].Stop 		:= FALSE;
 			MpAxisBasic_0[i].ErrorReset	:= FALSE;
 		END_IF;
 	
@@ -120,19 +121,25 @@ PROGRAM _CYCLIC
 				END_IF;
 			  
 			STEP_1: 
+				
+				AxisSequence.parameters[1].Homing.Position 	:= 30;
+				AxisSequence.parameters[2].Homing.Position	:= 200;
+				AxisSequence.parameters[1].Homing.Mode 	:= mcHOMING_DIRECT ;
+				AxisSequence.parameters[2].Homing.Mode 	:= mcHOMING_DIRECT ;
+				(*AxisSequence.parameters[1].Homing.Options.*)
 		
-				//	AxisSequence.cmd.MoveAbsolute[i]			:= TRUE;
 				IF (AxisSequence.status.StartSequence) AND (OldStartSequence <> AxisSequence.status.StartSequence) THEN 
 					MpAxisBasic_0[1].Home	:= TRUE;
 					MpAxisBasic_0[2].Home	:= TRUE;
 					PermissionToStart		:= TRUE;
 				END_IF;
 				
-				IF (MpAxisBasic_0[1].IsHomed AND MpAxisBasic_0[2].IsHomed) AND PermissionToStart THEN
+				IF (MpAxisBasic_0[1].IsHomed AND MpAxisBasic_0[2].IsHomed) AND (MpAxisBasic_0[1].Position = 30)
+					AND MpAxisBasic_0[2].Position = 200 AND PermissionToStart THEN
 					MpAxisBasic_0[1].Home	:= FALSE;	
 					MpAxisBasic_0[2].Home	:= FALSE;
 					PermissionToStart		:= FALSE;
-					CountSequence			:= 0;
+					CountSequence			:= 1;
 					AxisSequence.state		:= STEP_2;
 				END_IF;
 				

@@ -6,4 +6,5 @@ VAR
 	OldStartSequence : BOOL;
 	FinishSequence : ARRAY[1..MAX_AXIS] OF BOOL;
 	CountSequence : USINT;
+	HomePosition : ARRAY[1..MAX_AXIS] OF LREAL;
 END_VAR
