@@ -5,6 +5,8 @@ TYPE
 		status : AxisSequence_status_typ;
 		io : AxisSequence_io_typ;
 		state : AxisSequence_enum;
+		couplingParam : MpAxisCouplingParType;
+		camSequencer : USINT;
 		parameters : ARRAY[1..MAX_AXIS]OF MpAxisBasicParType;
 	END_STRUCT;
 	AxisSequence_cmd_typ : 	STRUCT 

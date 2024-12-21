@@ -7,4 +7,11 @@ VAR
 	FinishSequence : ARRAY[1..MAX_AXIS] OF BOOL;
 	CountSequence : USINT;
 	HomePosition : ARRAY[1..MAX_AXIS] OF LREAL;
+	PermissionToHome : BOOL;
+	ResetSequence : BOOL;
+	MpAxisCoupling_0 : MpAxisCoupling;
+	MpAxisCamSequencer_0 : MpAxisCamSequencer;
+	CamSequencerParam : MpAxisCamSequencerParType;
+	CamAutomatParam : McAcpAxCamAutParType;
+	EnableSequence : BOOL;
 END_VAR

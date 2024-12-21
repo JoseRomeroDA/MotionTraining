@@ -3,15 +3,14 @@
 <Configuration>
   <Element ID="gAxis_1" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
-    <Selector ID="BaseType" Value="RotaryPeriodic">
-      <Property ID="MeasurementUnitIsReadOnly" Value="0" />
-      <Property ID="MeasurementUnit" Value="17476" />
+    <Selector ID="BaseType" Value="LinearPeriodic">
+      <Property ID="MeasurementUnit" Value="5066068" />
       <Property ID="MeasurementResolutionIsReadOnly" Value="0" />
-      <Property ID="MeasurementResolution" Value="0.01" />
+      <Property ID="MeasurementResolution" Value="0.1" />
       <Property ID="CountDirectionIsReadOnly" Value="0" />
       <Property ID="CountDirection" Value="Standard" />
       <Group ID="PeriodSettings">
-        <Property ID="Period" Value="360.0" />
+        <Property ID="Period" Value="60" />
       </Group>
     </Selector>
     <Property ID="MovementLimitsIsReadOnly" Value="0" />
@@ -25,7 +24,7 @@
       <Property ID="VelocityIsReadOnly" Value="0" />
       <Selector ID="Velocity">
         <Property ID="VelocityMax" Value="3.4E38" />
-        <Property ID="Velocity" Value="1000" />
+        <Property ID="Velocity" Value="1980" />
       </Selector>
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
@@ -38,6 +37,6 @@
         <Property ID="Deceleration" Value="1000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

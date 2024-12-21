@@ -2,14 +2,14 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/16/2024 11:40:49" />
+    <TimeStamp LogicalPath="Demo.Hardware.hw" LastWriteTime="12/20/2024 17:59:13" />
   </TimeStamps>
   <Modules>
     <Module Name="4PPC70_0702_23B" Type="4PPC70.0702-23B" X="99" Y="100" />
     <Module Name="80VD100PD.C022-01" Type="80VD100PD.C022-01" X="140" Y="256" />
     <Module Name="8LVA33.R0021D000-0" Type="8LVA33.R0021D000-0" X="134" Y="574" />
     <Module Name="8LVA23.R0015D000-0" Type="8LVA23.R0015D000-0" X="134" Y="440" />
-    <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" X="331.1454" Y="100" />
+    <Module Name="4XP0043.00-00W" Type="4XP0043.00-00W" X="331" Y="100" />
   </Modules>
   <Links>
     <Link From="4PPC70_0702_23B" To="80VD100PD.C022-01" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
@@ -22,6 +22,16 @@
       <Point X="133.299988" Y="207" />
       <Point X="133.299988" Y="202" />
       <Point X="133.299988" Y="202" />
+    </Link>
+    <Link From="4PPC70_0702_23B" To="4XP0043.00-00W" FromPort="IF5" ToPort="X2X1" IsRoutedByUser="False">
+      <Point X="395.1454" Y="156" />
+      <Point X="395.1454" Y="156" />
+      <Point X="395.1454" Y="161" />
+      <Point X="395.1454" Y="215" />
+      <Point X="180.299988" Y="215" />
+      <Point X="180.299988" Y="207" />
+      <Point X="180.299988" Y="202" />
+      <Point X="180.299988" Y="202" />
     </Link>
     <Link From="80VD100PD.C022-01" To="8LVA23.R0015D000-0" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
       <Point X="148" Y="309" />
@@ -66,16 +76,6 @@
       <Point X="183.5" Y="573.1" />
       <Point X="183.5" Y="580.1" />
       <Point X="183.5" Y="580.1" />
-    </Link>
-    <Link From="4XP0043.00-00W" To="4PPC70_0702_23B" FromPort="X2X1" ToPort="IF5" IsRoutedByUser="False">
-      <Point X="395.1454" Y="156" />
-      <Point X="395.1454" Y="156" />
-      <Point X="395.1454" Y="161" />
-      <Point X="395.1454" Y="215" />
-      <Point X="180.299988" Y="215" />
-      <Point X="180.299988" Y="207" />
-      <Point X="180.299988" Y="202" />
-      <Point X="180.299988" Y="202" />
     </Link>
   </Links>
   <InfoElements>

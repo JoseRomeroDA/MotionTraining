@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">Axis1.axis</Object>
     <Object Type="File">Axis2.axis</Object>
+    <Object Type="File">CfgAutomat.axisfeature</Object>
   </Objects>
 </Package>
