@@ -140,16 +140,16 @@
             </Group>
             <Group ID="Events">
               <Group ID="Event[0]">
-                <Property ID="Type" Value="StateEnd" />
-                <Property ID="Transition" Value="EndOfState" />
-                <Property ID="SynchronousUpdate" Value="NotUsed" />
-                <Property ID="NextState" Value="1" />
-              </Group>
-              <Group ID="Event[1]">
                 <Property ID="Type" Value="Signal1FromPLC" />
                 <Property ID="Transition" Value="EndOfState" />
                 <Property ID="SynchronousUpdate" Value="NotUsed" />
                 <Property ID="NextState" Value="2" />
+              </Group>
+              <Group ID="Event[1]">
+                <Property ID="Type" Value="StateEnd" />
+                <Property ID="Transition" Value="EndOfState" />
+                <Property ID="SynchronousUpdate" Value="NotUsed" />
+                <Property ID="NextState" Value="1" />
               </Group>
             </Group>
           </Group>
